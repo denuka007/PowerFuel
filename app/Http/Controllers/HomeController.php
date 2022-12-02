@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Auth;
 
-use App\Modules\User;
+use App\Models\User;
 
 class HomeController extends Controller
 {
@@ -31,13 +31,18 @@ class HomeController extends Controller
     public function addseller(Request $request)
     {
         $data=new user;
+
         $data->name=$request->name;
         $data->email=$request->email;
         $data->password=bcrypt($request->password);
 
-        $data->user_role='2';
+        $data->user_role = '2';
+
         $data->save();
 
         return redirect()->back();
+
+
+
     }
 }
