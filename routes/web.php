@@ -29,4 +29,5 @@ Route::middleware([
 ])->group(function () {
     Route::get('/dashboard', [HomeController::class, "index"])->name('dashboard');
     Route::get('/addseller', [AdminController::class, "addsellers"])->name('admin.addseller');
+    Route::post('/addseller/fuel', [AdminController::class, "fueladd"])->name('admin.addseller.fuel');
 });

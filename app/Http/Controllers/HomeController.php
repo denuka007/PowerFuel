@@ -33,7 +33,7 @@ class HomeController extends Controller
   //      $data=new user;
 
    //     $data->name=$request->name;
-   //   $data->email=$request->email;
+   //     $data->email=$request->email;
    //     $data->password=bcrypt($request->password);
 
    //     $data->user_role = '2';
