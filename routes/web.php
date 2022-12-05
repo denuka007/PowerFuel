@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,9 +20,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/redirects', [HomeController::class, "index"]);
-
-Route::post('/addseller', [HomeController::class, "addseller"]);
+Route::get('/redirects', [HomeController::class, "index"])->name('admin.dash');
 
 Route::middleware([
     'auth:sanctum',
@@ -29,4 +28,5 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::get('/dashboard', [HomeController::class, "index"])->name('dashboard');
+    Route::get('/addseller', [AdminController::class, "addsellers"])->name('admin.addseller');
 });

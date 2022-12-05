@@ -16,7 +16,7 @@ class HomeController extends Controller
 
         if($role=='1')
         {
-            return view('admin');
+            return view('Adminn.dashboard');
         }
         elseif($role=='2')
         {
@@ -28,21 +28,21 @@ class HomeController extends Controller
         }
     }
 
-    public function addseller(Request $request)
-    {
-        $data=new user;
+   // public function addseller(Request $request)
+   // {
+  //      $data=new user;
 
-        $data->name=$request->name;
-        $data->email=$request->email;
-        $data->password=bcrypt($request->password);
+   //     $data->name=$request->name;
+   //   $data->email=$request->email;
+   //     $data->password=bcrypt($request->password);
 
-        $data->user_role = '2';
+   //     $data->user_role = '2';
 
-        $data->save();
+   //     $data->save();
 
-        return redirect()->back();
+     //   return redirect()->back();
 
 
 
-    }
+  //  }
 }
