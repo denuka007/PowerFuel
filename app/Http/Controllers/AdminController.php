@@ -15,6 +15,7 @@ class AdminController extends Controller
     public function fueladd(Request $request) {
 
         Fuelstation::create([
+            'stationid'=> $request->regid,
             'company_name'=> $request->company_name,
             'manager_name'=> $request->manager_name,
             'district'=> $request->district,
@@ -24,10 +25,11 @@ class AdminController extends Controller
         ]);
 
         User::create([
-            'name'=> ('seller'),
+            'name'=> $request->company_name,
             'email'=> $request->email,
+            'fid'=> $request->regid,
             'user_role'=> ('2'),
-            'password'=> $request->password
+            'password'=> bcrypt($request->password)
 
         ]);
 

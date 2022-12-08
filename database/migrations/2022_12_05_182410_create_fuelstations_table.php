@@ -14,6 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('fuelstations', function (Blueprint $table) {
+
+            $table->string('stationid');
             $table->id();
             $table->string('company_name');
             $table->string('manager_name');

@@ -1,7 +1,42 @@
-<x-app-layout>
+<!doctype html>
+<html lang="en">
 
-    <div>
-        <h1>Fuel Stations Dashboard</h1>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="./img/fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.12.1/css/pro.min.css">
+    <link rel="stylesheet" type="text/css" href="seller/css/style.css">
+    <title>PowerFuel</title>
+</head>
+
+<body class="bg-gray-100">
+
+
+    <!-- start navbar -->
+    @include('layouts.sellerinc.navbar')
+    <!-- end navbar -->
+
+
+    <!-- strat wrapper -->
+    <div class="h-screen flex flex-row flex-wrap">
+
+        <!-- start sidebar -->
+        @include('layouts.sellerinc.sidebar')
+        <!-- end sidbar -->
+
+        <!-- strat content -->
+        @yield('content')
+        <!-- end content -->
+
     </div>
-    
-</x-app-layout>
+    <!-- end wrapper -->
+
+    <!-- script -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="seller/js/scripts.js"></script>
+    <!-- end script -->
+
+</body>
+
+</html>

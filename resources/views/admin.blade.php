@@ -8,11 +8,11 @@
     <title>PowerFuel</title>
 
     <!-- Tailwind is included -->
-    <link rel="stylesheet" href="css/main.css?v=1652870200386">
+    <link rel="stylesheet" href="adminn/css/main.css?v=1652870200386">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="adminn/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="adminn/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="adminn/favicon-16x16.png" />
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#00b4b6" />
 
     <meta name="description" content="Admin One - free Tailwind dashboard">
@@ -66,10 +66,10 @@
     </div>
 
     <!-- Scripts below are for demo only -->
-    <script type="text/javascript" src="js/main.min.js?v=1652870200386"></script>
+    <script type="text/javascript" src="adminn/js/main.min.js?v=1652870200386"></script>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
-    <script type="text/javascript" src="js/chart.sample.min.js"></script>
+    <script type="text/javascript" src="adminn/js/chart.sample.min.js"></script>
 
 
     <script>

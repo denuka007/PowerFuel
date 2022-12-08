@@ -10,20 +10,27 @@
                     <div class="overflow-hidden shadow sm:rounded-md">
                         <div class="bg-white px-4 py-5 sm:p-6">
                             <div class="grid grid-cols-6 gap-6">
+
                                 <div class="col-span-6 sm:col-span-3">
-                                    <label for="first-name" class="block text-sm font-medium text-gray-700">Company Name</label>
-                                    <input type="text" name="company_name" id="company name" placeholder="Ex: John"
+                                    <label for="company_name" class="block text-sm font-medium text-gray-700">Company Name</label>
+                                    <input type="text" name="company_name" id="company name" placeholder="Ex: John Pvt"
                                         class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm forminput">
                                 </div>
 
-                                <div class="col-span-6 sm:col-span-3">
-                                    <label for="last-name" class="block text-sm font-medium text-gray-700">Manager Name</label>
-                                    <input type="text" name="manager_name" id="manager name"
+                                <div class="col-span-6 sm:col-span-3 lg:col-span-2">
+                                    <label for="regid" class="block text-sm font-medium text-gray-700">Registration ID</label>
+                                    <input type="text" name="regid" id="regid" placeholder="Enter ID"
                                         class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
                                 </div>
 
                                 <div class="col-span-6 sm:col-span-3">
-                                    <label for="country" class="block text-sm font-medium text-gray-700">District</label>
+                                    <label for="manager_name" class="block text-sm font-medium text-gray-700">Manager Name</label>
+                                    <input type="text" name="manager_name" id="manager name" placeholder="Ex: John"
+                                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                                </div>
+
+                                <div class="col-span-6 sm:col-span-3">
+                                    <label for="district" class="block text-sm font-medium text-gray-700">District</label>
                                     <select id="district" name="district"
                                         class="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
                                         <option value="galle">Galle</option>
@@ -76,7 +83,7 @@
 
                                 <div class="col-span-6 sm:col-span-3 lg:col-span-2">
                                     <label for="region" class="block text-sm font-medium text-gray-700">Password</label>
-                                    <input type="text" name="password" id="password"
+                                    <input type="password" name="password" id="password"
                                         class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
                                 </div>
                             </div>

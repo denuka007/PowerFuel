@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 use App\Models\User;
+use App\Models\Fuelstation;
 
 class HomeController extends Controller
 {
@@ -16,11 +17,14 @@ class HomeController extends Controller
 
         if($role=='1')
         {
+            //details get here
             return view('Adminn.dashboard');
         }
         elseif($role=='2')
         {
-            return view('seller');
+            $post = Fuelstation::where('stationid', Auth::user()->fid)->get();
+            return view('seller.dashboard', compact('post'));
+
         }
         else
         {
