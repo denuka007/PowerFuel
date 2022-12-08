@@ -58,7 +58,7 @@
 
         @yield('content')
 
-        @include('layouts.inc.adminfooter')
+        <!-- Add footer here -->
 
     </div>
     </div>

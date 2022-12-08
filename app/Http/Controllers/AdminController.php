@@ -41,4 +41,8 @@ class AdminController extends Controller
 
         return back();
     }
+
+    public function reqs() {
+        return view('Adminn.request');
+    }
 }

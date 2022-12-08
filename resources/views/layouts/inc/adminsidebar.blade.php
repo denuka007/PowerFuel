@@ -23,7 +23,7 @@
                 </a>
             </li>
             <li class="--set-active-forms-html">
-                <a href="forms.html">
+                <a href="{{ route('admin.request') }}">
                     <span class="icon"><i class="mdi mdi-hand"></i></span>
                     <span class="menu-item-label">Requests</span>
                 </a>

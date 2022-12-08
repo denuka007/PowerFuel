@@ -32,6 +32,7 @@ Route::middleware([
     //admin
     Route::get('/addseller', [AdminController::class, "addsellers"])->name('admin.addseller');
     Route::post('/addseller/fuel', [AdminController::class, "fueladd"])->name('admin.addseller.fuel');
+    Route::get('/request', [AdminController::class, "reqs"])->name('admin.request');
 
     //seller
     Route::get('/fulrequest', [SellerController::class, "fuelreq"])->name('seller.reqfuel');
