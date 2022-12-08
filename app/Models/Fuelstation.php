@@ -12,6 +12,8 @@ class Fuelstation extends Model
         'company_name',
         'manager_name',
         'district',
+        'city',
+        'density',
         'address',
         'contact'
     ];

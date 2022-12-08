@@ -13,18 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('fuelstations', function (Blueprint $table) {
-
-            $table->string('stationid');
+        Schema::create('requests', function (Blueprint $table) {
             $table->id();
-            $table->string('company_name');
-            $table->string('manager_name');
-            $table->string('district');
-            $table->string('city');
-            $table->string('density');
-            $table->string('address');
-            $table->string('contact');
+            $table->string('fid');
+            $table->string('note');
+            $table->string('status');
+            $table->string('paymentstatus');
             $table->timestamps();
+
+            //$table->foreign('fid')->references('stationid')->on('fuelstations');
+
         });
     }
 
@@ -35,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fuelstations');
+        Schema::dropIfExists('requests');
     }
 };

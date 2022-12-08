@@ -14,11 +14,17 @@ class AdminController extends Controller
 
     public function fueladd(Request $request) {
 
+        $pop = $request->population;
+        $area = $request->area;
+        $den = $pop / $area;
+
         Fuelstation::create([
             'stationid'=> $request->regid,
             'company_name'=> $request->company_name,
             'manager_name'=> $request->manager_name,
             'district'=> $request->district,
+            'city'=> $request->city,
+            'density'=> $den,
             'address'=> $request->address,
             'contact'=> $request->contact
 

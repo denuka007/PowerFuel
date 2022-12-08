@@ -13,21 +13,21 @@ class="relative flex flex-col flex-wrap bg-white border-r border-gray-300 p-6 fl
     </div>
     <!-- end sidebar toggle -->
 
-    <p class="uppercase text-xs text-gray-600 mb-4 tracking-wider">homes</p>
+    <p class="uppercase text-xs text-gray-600 mb-4 tracking-wider">options</p>
 
     <!-- link -->
-    <a href="./index.html"
+    <a href="{{ route('dash') }}"
         class="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
         <i class="fad fa-chart-pie text-xs mr-2"></i>
-        Analytics dashboard
+        Dashboard
     </a>
     <!-- end link -->
 
     <!-- link -->
-    <a href="./index-1.html"
+    <a href="{{ route('seller.reqfuel') }}"
         class="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
         <i class="fad fa-shopping-cart text-xs mr-2"></i>
-        ecommerce dashboard
+        Fuel Request
     </a>
     <!-- end link -->
 

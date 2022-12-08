@@ -9,7 +9,7 @@
     <!-- General Report -->
     <div class="grid grid-cols-4 gap-6 xl:grid-cols-1">
 
-
+        @foreach ($post as $posts)
         <!-- card -->
         <div class="report-card">
             <div class="card">
@@ -17,18 +17,20 @@
 
                     <!-- top -->
                     <div class="flex flex-row justify-between items-center">
-                        <div class="h6 text-indigo-700 fad fa-shopping-cart"></div>
+                        <div class="h6 text-indigo-700 fad fa-gas-pump"></div>
+                        <form action="{{ route('seller.request') }}" method="POST">
+                            @csrf
                         <span class="rounded-full text-white badge bg-teal-400 text-xs">
-                            12%
-                            <i class="fal fa-chevron-up ml-1"></i>
+                            <button type="submit">Request</button>
                         </span>
+                        </form>
                     </div>
                     <!-- end top -->
 
                     <!-- bottom -->
                     <div class="mt-8">
-                        <h1 class="h5 num-4"></h1>
-                        <p>items sales</p>
+                        <h1 class="h5">{{ $posts->density }}</h1>
+                        <p>Density/Litres</p>
                     </div>
                     <!-- end bottom -->
 
@@ -37,6 +39,7 @@
             <div class="footer bg-white p-1 mx-4 border border-t-0 rounded rounded-t-none"></div>
         </div>
         <!-- end card -->
+        @endforeach
 
 
         <!-- card -->
