@@ -54,4 +54,19 @@ class AdminController extends Controller
         $view = Requests::where('id',$reqId)->get();
         return view('Adminn.reqview', compact('view'));
     }
+
+    public function accept($Id) {
+
+        $up = Requests::find($Id);
+        $up->note = ('Your request accepted please make your payment');
+        $up->status = ('Approved');
+        $up->update();
+        return back()->with('status',"Fuel Request Accepted");
+    }
+
+    public function delete($Id) {
+
+        //email
+        $up = Requests::find($Id)->delete();
+    }
 }
