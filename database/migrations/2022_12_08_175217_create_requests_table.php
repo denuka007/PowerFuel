@@ -16,9 +16,13 @@ return new class extends Migration
         Schema::create('requests', function (Blueprint $table) {
             $table->id();
             $table->string('fid');
-            $table->string('note');
-            $table->string('status');
-            $table->string('paymentstatus');
+            $table->string('company');
+            $table->string('district');
+            $table->string('city');
+            $table->string('density');
+            $table->string('note')->nullable();
+            $table->string('status')->default('pending');
+            $table->string('paymentstatus')->default('pending');
             $table->timestamps();
 
             //$table->foreign('fid')->references('stationid')->on('fuelstations');

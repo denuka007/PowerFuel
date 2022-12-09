@@ -20,9 +20,9 @@
                         <div class="h6 text-indigo-700 fad fa-gas-pump"></div>
                         <form action="{{ route('seller.request') }}" method="POST">
                             @csrf
-                        <span class="rounded-full text-white badge bg-teal-400 text-xs">
-                            <button type="submit">Request</button>
-                        </span>
+                            <button type="submit" class="bg-white hover:bg-blue-300 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                                Request
+                            </button>
                         </form>
                     </div>
                     <!-- end top -->

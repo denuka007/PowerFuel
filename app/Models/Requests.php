@@ -9,6 +9,10 @@ class requests extends Model
 {
     protected $fillable = [
         'fid',
+        'company',
+        'district',
+        'city',
+        'density',
         'note',
         'status',
         'paymentstatus'

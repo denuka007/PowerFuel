@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Fuelstation;
+use App\Models\Requests;
 
 class AdminController extends Controller
 {
@@ -39,10 +40,18 @@ class AdminController extends Controller
 
         ]);
 
-        return back();
+        return back()->with('status',"FuelStation Added Successfully");
     }
 
     public function reqs() {
-        return view('Adminn.request');
+
+        $data = Requests::all();
+        return view('Adminn.request', compact('data'));
+    }
+
+    public function reqsview($reqId) {
+
+        $view = Requests::where('id',$reqId)->get();
+        return view('Adminn.reqview', compact('view'));
     }
 }

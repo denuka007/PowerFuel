@@ -6,14 +6,14 @@
     <header class="card-header">
         <p class="card-header-title mb-5">
             <span class="icon"><i class="mdi mdi-account-multiple"></i></span>
-            Fuel Stations
+            Fuel Requests
         </p>
     </header>
     <div class="card-content">
         <table>
             <thead>
                 <tr>
-                    <th>Station Name</th>
+                    <th>Station ID</th>
                     <th>Company</th>
                     <th>District</th>
                     <th>City</th>
@@ -22,27 +22,26 @@
                 </tr>
             </thead>
             <tbody>
+                @foreach ($data as $reqs)
                 <tr>
-                    <td data-label="Name">Rebecca Bauch</td>
-                    <td data-label="Company">Daugherty-Daniel</td>
-                    <td data-label="City">South Cory</td>
-                    <td data-label="City">South Cory</td>
-                    <td data-label="Created">
-                        <small class="text-gray-500" title="Oct 25, 2021">Oct 25, 2021</small>
+                    <td data-label="Station Name">{{ $reqs->fid }}</td>
+                    <td data-label="Company">{{ $reqs->company }}</td>
+                    <td data-label="District">{{ $reqs->district }}</td>
+                    <td data-label="City">{{ $reqs->city }}</td>
+                    <td data-label="Time">
+                        <small class="text-gray-500">{{date('Y-m-d', strtotime($reqs->created_at))}}</small>
                     </td>
                     <td class="actions-cell">
                         <div class="buttons right nowrap">
-                            <button class="button small blue --jb-modal" data-target="sample-modal-2"
-                                type="button">
-                                <span class="icon"><i class="mdi mdi-eye"></i></span>
-                            </button>
-                            <button class="button small red --jb-modal" data-target="sample-modal"
-                                type="button">
-                                <span class="icon"><i class="mdi mdi-trash-can"></i></span>
-                            </button>
+                             <a href="{{ route('admin.request.view' , $reqs->id) }}"
+                            <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full mr-2">View</button>
+                             </a>
+                            <!--<button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mr-2">Accept</button>
+                            <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">Cancel</button>-->
                         </div>
                     </td>
                 </tr>
+                @endforeach
             </tbody>
         </table>
     </div>

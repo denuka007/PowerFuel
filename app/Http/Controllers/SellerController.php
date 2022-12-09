@@ -14,13 +14,31 @@ class SellerController extends Controller
         return view('seller.request');
     }
 
-public function req() {
+public function req(Request $request) {
 
+    if (Requests::where('fid', Auth::user()->fid)->exists()) {
+
+        return back()->with('status',"Your Already Requested");
+    }
+
+    else {
+
+        $post = Fuelstation::where('stationid', Auth::user()->fid)->get();
+
+       foreach($post  as $posts)
     Requests::create([
-        'fid'=> auth()->user()->fid
-    ]);
+            'fid'=> auth()->user()->fid,
+            'company'=> $posts->company_name,
+            'district'=> $posts->district,
+            'city'=> $posts->city,
+            'density'=> $posts->density
 
-    return back();
+        ]);
+
+
+        return back()->with('status',"Your Request Send Successfully");
+
+    }
 
 }
 
