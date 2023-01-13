@@ -34,6 +34,8 @@ Route::middleware([
     Route::post('/addseller/fuel', [AdminController::class, "fueladd"])->name('admin.addseller.fuel');
     Route::get('/request', [AdminController::class, "reqs"])->name('admin.request');
     Route::get('/request/view/{reqId}', [AdminController::class, "reqsview"])->name('admin.request.view');
+    Route::get('/request/view/accept/{Id}', [AdminController::class, "accept"])->name('admin.request.accept');
+    Route::get('/request/view/delete/{Id}', [AdminController::class, "delete"])->name('admin.request.delete');
 
     //seller
     Route::get('/fulrequest', [SellerController::class, "fuelreq"])->name('seller.reqfuel');
