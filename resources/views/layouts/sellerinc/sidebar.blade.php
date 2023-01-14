@@ -27,15 +27,8 @@ class="relative flex flex-col flex-wrap bg-white border-r border-gray-300 p-6 fl
     <a href="{{ route('seller.reqfuel') }}"
         class="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
         <i class="fad fa-shopping-cart text-xs mr-2"></i>
-        Fuel Request
+        My Fuel Request
     </a>
-<<<<<<< HEAD
-=======
-    <!-- end link -->
-
-
-
->>>>>>> eaef59b51e12b1fc5f2f94707171fbbfdd8e1ccd
 </div>
 <!-- end sidebar content -->
 
