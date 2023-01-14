@@ -11,16 +11,14 @@
             <div class="flex flex-row -mx-3">
               <div class="flex-none w-2/3 max-w-full px-3">
                 <div>
-                  <p class="mb-0 font-sans font-semibold leading-normal text-sm">Today's Money</p>
-                  <h5 class="mb-0 font-bold">
-                    $53,000
-                    <span class="leading-normal text-sm font-weight-bolder text-lime-500">+55%</span>
-                  </h5>
+
+                  <button type="submit" class="btn btn-outline-success">Request Fuel Quata</button>
+
                 </div>
               </div>
               <div class="px-3 text-right basis-1/3">
                 <div class="inline-block w-12 h-12 text-center rounded-lg bg-gradient-to-tl from-purple-700 to-pink-500">
-                  <i class="ni leading-none ni-money-coins text-lg relative top-3.5 text-white"></i>
+                  <i class="ni leading-none ni-send text-lg relative top-3.5 text-white"></i>
                 </div>
               </div>
             </div>
@@ -35,16 +33,15 @@
             <div class="flex flex-row -mx-3">
               <div class="flex-none w-2/3 max-w-full px-3">
                 <div>
-                  <p class="mb-0 font-sans font-semibold leading-normal text-sm">Today's Users</p>
+                  <p class="mb-0 font-sans font-semibold leading-normal text-sm">My Available Quata</p>
                   <h5 class="mb-0 font-bold">
                     2,300
-                    <span class="leading-normal text-sm font-weight-bolder text-lime-500">+3%</span>
                   </h5>
                 </div>
               </div>
               <div class="px-3 text-right basis-1/3">
                 <div class="inline-block w-12 h-12 text-center rounded-lg bg-gradient-to-tl from-purple-700 to-pink-500">
-                  <i class="ni leading-none ni-world text-lg relative top-3.5 text-white"></i>
+                  <i class="ni leading-none ni-chart-bar-32 text-lg relative top-3.5 text-white"></i>
                 </div>
               </div>
             </div>
@@ -59,16 +56,15 @@
             <div class="flex flex-row -mx-3">
               <div class="flex-none w-2/3 max-w-full px-3">
                 <div>
-                  <p class="mb-0 font-sans font-semibold leading-normal text-sm">New Clients</p>
+                  <p class="mb-0 font-sans font-semibold leading-normal text-sm">My Station Name</p>
                   <h5 class="mb-0 font-bold">
-                    +3,462
-                    <span class="leading-normal text-red-600 text-sm font-weight-bolder">-2%</span>
+                    Name
                   </h5>
                 </div>
               </div>
               <div class="px-3 text-right basis-1/3">
                 <div class="inline-block w-12 h-12 text-center rounded-lg bg-gradient-to-tl from-purple-700 to-pink-500">
-                  <i class="ni leading-none ni-paper-diploma text-lg relative top-3.5 text-white"></i>
+                  <i class="ni leading-none ni-square-pin text-lg relative top-3.5 text-white"></i>
                 </div>
               </div>
             </div>
@@ -83,16 +79,15 @@
             <div class="flex flex-row -mx-3">
               <div class="flex-none w-2/3 max-w-full px-3">
                 <div>
-                  <p class="mb-0 font-sans font-semibold leading-normal text-sm">Sales</p>
+                  <p class="mb-0 font-sans font-semibold leading-normal text-sm">Quata Update Date</p>
                   <h5 class="mb-0 font-bold">
-                    $103,430
-                    <span class="leading-normal text-sm font-weight-bolder text-lime-500">+5%</span>
+                    10/02/2023
                   </h5>
                 </div>
               </div>
               <div class="px-3 text-right basis-1/3">
                 <div class="inline-block w-12 h-12 text-center rounded-lg bg-gradient-to-tl from-purple-700 to-pink-500">
-                  <i class="ni leading-none ni-cart text-lg relative top-3.5 text-white"></i>
+                  <i class="ni leading-none ni-curved-next text-lg relative top-3.5 text-white"></i>
                 </div>
               </div>
             </div>

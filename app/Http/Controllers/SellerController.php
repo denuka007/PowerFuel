@@ -11,7 +11,8 @@ use App\Models\Requests;
 class SellerController extends Controller
 {
     public function fuelreq() {
-        return view('seller.request');
+        $data = Requests::all();
+        return view('seller.request', compact('data'));
     }
 
 public function req(Request $request) {

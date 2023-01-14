@@ -68,5 +68,6 @@ class AdminController extends Controller
 
         //email
         $up = Requests::find($Id)->delete();
+        return back()->with('status',"Fuel Request Deleted Successfully");
     }
 }

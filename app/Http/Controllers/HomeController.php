@@ -17,8 +17,8 @@ class HomeController extends Controller
 
         if($role=='1')
         {
-            //details get here
-            return view('Adminn.dashboard');
+            $all = Fuelstation::all();
+            return view('Adminn.dashboard', compact('all'));
         }
         elseif($role=='2')
         {

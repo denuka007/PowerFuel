@@ -30,10 +30,10 @@
                 <div class="flex items-center justify-between">
                     <div class="widget-label">
                         <h3>
-                            Clients
+                            Total Fuel Station
                         </h3>
                         <h1>
-                            512
+                            2
                         </h1>
                     </div>
                     <span class="icon widget-icon text-green-500"><i
@@ -46,14 +46,14 @@
                 <div class="flex items-center justify-between">
                     <div class="widget-label">
                         <h3>
-                            Sales
+                            Remainings Litres
                         </h3>
                         <h1>
-                            $7,770
+                            98000L
                         </h1>
                     </div>
                     <span class="icon widget-icon text-blue-500"><i
-                            class="mdi mdi-cart-outline mdi-48px"></i></span>
+                            class="mdi mdi-fuel mdi-48px"></i></span>
                 </div>
             </div>
         </div>
@@ -63,13 +63,13 @@
                 <div class="flex items-center justify-between">
                     <div class="widget-label">
                         <h3>
-                            Performance
+                            New Fuel Requests
                         </h3>
                         <h1>
-                            256%
+                            1
                         </h1>
                     </div>
-                    <span class="icon widget-icon text-red-500"><i class="mdi mdi-finance mdi-48px"></i></span>
+                    <span class="icon widget-icon text-red-500"><i class="mdi mdi-message mdi-48px"></i></span>
                 </div>
             </div>
         </div>
@@ -87,15 +87,16 @@
                 <thead>
                     <tr>
                         <th></th>
-                        <th>Name</th>
+                        <th>Station ID</th>
                         <th>Company</th>
                         <th>City</th>
-                        <th>Progress</th>
-                        <th>Created</th>
+                        <th>Address</th>
+                        <th>District</th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach ($all as $alls)
                     <tr>
                         <td class="image-cell">
                             <div class="image">
@@ -103,15 +104,11 @@
                                     class="rounded-full">
                             </div>
                         </td>
-                        <td data-label="Name">Rebecca Bauch</td>
-                        <td data-label="Company">Daugherty-Daniel</td>
-                        <td data-label="City">South Cory</td>
-                        <td data-label="Progress" class="progress-cell">
-                            <progress max="100" value="79">79</progress>
-                        </td>
-                        <td data-label="Created">
-                            <small class="text-gray-500" title="Oct 25, 2021">Oct 25, 2021</small>
-                        </td>
+                        <td data-label="Name">{{$alls->stationid}}</td>
+                        <td data-label="Company">{{$alls->company_name}}</td>
+                        <td data-label="City">{{$alls->city}}</td>
+                        <td data-label="City">{{$alls->address}}</td>
+                        <td data-label="City">{{$alls->district}}</td>
                         <td class="actions-cell">
                             <div class="buttons right nowrap">
                                 <button class="button small blue --jb-modal" data-target="sample-modal-2"
@@ -125,94 +122,9 @@
                             </div>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="image-cell">
-                            <div class="image">
-                                <img src="https://avatars.dicebear.com/v2/initials/felicita-yundt.svg"
-                                    class="rounded-full">
-                            </div>
-                        </td>
-                        <td data-label="Name">Felicita Yundt</td>
-                        <td data-label="Company">Johns-Weissnat</td>
-                        <td data-label="City">East Ariel</td>
-                        <td data-label="Progress" class="progress-cell">
-                            <progress max="100" value="67">67</progress>
-                        </td>
-                        <td data-label="Created">
-                            <small class="text-gray-500" title="Jan 8, 2021">Jan 8, 2021</small>
-                        </td>
-                        <td class="actions-cell">
-                            <div class="buttons right nowrap">
-                                <button class="button small blue --jb-modal" data-target="sample-modal-2"
-                                    type="button">
-                                    <span class="icon"><i class="mdi mdi-eye"></i></span>
-                                </button>
-                                <button class="button small red --jb-modal" data-target="sample-modal"
-                                    type="button">
-                                    <span class="icon"><i class="mdi mdi-trash-can"></i></span>
-                                </button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="image-cell">
-                            <div class="image">
-                                <img src="https://avatars.dicebear.com/v2/initials/mr-larry-satterfield-v.svg"
-                                    class="rounded-full">
-                            </div>
-                        </td>
-                        <td data-label="Name">Mr. Larry Satterfield V</td>
-                        <td data-label="Company">Hyatt Ltd</td>
-                        <td data-label="City">Windlerburgh</td>
-                        <td data-label="Progress" class="progress-cell">
-                            <progress max="100" value="16">16</progress>
-                        </td>
-                        <td data-label="Created">
-                            <small class="text-gray-500" title="Dec 18, 2021">Dec 18, 2021</small>
-                        </td>
-                        <td class="actions-cell">
-                            <div class="buttons right nowrap">
-                                <button class="button small blue --jb-modal" data-target="sample-modal-2"
-                                    type="button">
-                                    <span class="icon"><i class="mdi mdi-eye"></i></span>
-                                </button>
-                                <button class="button small red --jb-modal" data-target="sample-modal"
-                                    type="button">
-                                    <span class="icon"><i class="mdi mdi-trash-can"></i></span>
-                                </button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="image-cell">
-                            <div class="image">
-                                <img src="https://avatars.dicebear.com/v2/initials/mr-broderick-kub.svg"
-                                    class="rounded-full">
-                            </div>
-                        </td>
-                        <td data-label="Name">Mr. Broderick Kub</td>
-                        <td data-label="Company">Kshlerin, Bauch and Ernser</td>
-                        <td data-label="City">New Kirstenport</td>
-                        <td data-label="Progress" class="progress-cell">
-                            <progress max="100" value="71">71</progress>
-                        </td>
-                        <td data-label="Created">
-                            <small class="text-gray-500" title="Sep 13, 2021">Sep 13, 2021</small>
-                        </td>
-                        <td class="actions-cell">
-                            <div class="buttons right nowrap">
-                                <button class="button small blue --jb-modal" data-target="sample-modal-2"
-                                    type="button">
-                                    <span class="icon"><i class="mdi mdi-eye"></i></span>
-                                </button>
-                                <button class="button small red --jb-modal" data-target="sample-modal"
-                                    type="button">
-                                    <span class="icon"><i class="mdi mdi-trash-can"></i></span>
-                                </button>
-                            </div>
-                        </td>
-                    </tr>
+
                 </tbody>
+                @endforeach
             </table>
         </div>
     </div>
